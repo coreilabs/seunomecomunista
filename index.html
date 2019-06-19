@@ -49,7 +49,6 @@
 
 
 <script>
-    // console.log("marco");
 
 $(document).ready(function(){
 
@@ -120,8 +119,8 @@ $(".pnome").hide();
 
   var dia = this.value;
  pnome = listapnome[dia];
-  console.log( this.value );
-  console.log(listapnome[dia] );
+  // console.log( this.value );
+  // console.log(listapnome[dia] );
 });
 
 
@@ -137,8 +136,8 @@ $(".pnome").hide();
 
 var mes = this.value;
 snome = listasnome[mes];
-console.log( this.value );
-console.log(listasnome[mes] );
+// console.log( this.value );
+// console.log(listasnome[mes] );
 });
 
 
@@ -146,7 +145,7 @@ console.log(listasnome[mes] );
   if(!snome || !pnome){
      $('.alerta').show();
 
-    console.log("selecione o dia e o mes do seu aniversario"); 
+    // console.log("selecione o dia e o mes do seu aniversario"); 
   }else{
 
         $(".pnome").html(pnome+" "+snome);

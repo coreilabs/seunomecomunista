@@ -1,5 +1,5 @@
-# seunomecomunista
-Descubra Seu Nome Comunista
+# seunomepetista
+Descubra Seu Nome Petista
 
 
 é nois poarr

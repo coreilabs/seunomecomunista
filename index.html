@@ -110,6 +110,13 @@ $(".pnome").hide();
 
      $('.alerta').hide();
 
+     $('.share2').css("opacity", 0);
+
+      $(".share").html("");
+
+
+
+
   var dia = this.value;
  pnome = listapnome[dia];
   console.log( this.value );
@@ -120,8 +127,12 @@ $(".pnome").hide();
 
  $('#mes').on('change', function() {
 $(".pnome").hide();
-  
+
      $('.alerta').hide();
+
+         $('.share2').css("opacity", 0);
+
+      $(".share").html("");
 
 var mes = this.value;
 snome = listasnome[mes];

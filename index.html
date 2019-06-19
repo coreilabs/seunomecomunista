@@ -16,13 +16,10 @@
 
 
 <meta name="twitter:card" content="summary_large_image" />
-<!-- <meta name="twitter:site" content="@nytimesbits" /> -->
+
 <meta name="twitter:creator" content="@dedodeouro" />
 
 <meta property="og:url" content="https://coreilabs.github.io/seunomecomunista/" />
-<!-- <meta property="og:title" content="A Twitter for My Sister" /> -->
-<!-- <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." /> -->
-<!-- <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" /> -->
 
 
 
@@ -43,102 +40,10 @@
 
 
 
-<!-- <meta name="viewport" content="initial-scale=1"> -->
-
-
 <meta name="viewport" content="width=device-width, user-scalable=no">
 
-<!-- <link rel="stylesheet" href="fontawesome/css/all.css"> -->
 
 
-
-<script>
-
-
-
-
-
-  // $(document).ready(function(){
-
-
-
-// });
-
-// $(document).ready( function () {
-// jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
-//     return ! data ?
-//         '' :
-//         typeof data === 'string' ?
-//             data
-//                 .replace( /έ/g, 'ε' )
-//                 .replace( /[ύϋΰ]/g, 'υ' )
-//                 .replace( /ό/g, 'ο' )
-//                 .replace( /ώ/g, 'ω' )
-//                 .replace( /ά/g, 'α' )
-//                 .replace( /[ίϊΐ]/g, 'ι' )
-//                 .replace( /ή/g, 'η' )
-//                 .replace( /\n/g, ' ' )
-//                 .replace( /á/g, 'a' )
-//                 .replace( /â/g, 'a' )
-//                 .replace( /é/g, 'e' )
-//                 .replace( /í/g, 'i' )
-//                 .replace( /ó/g, 'o' )
-//                 .replace( /ú/g, 'u' )
-//                 .replace( /ê/g, 'e' )
-//                 .replace( /î/g, 'i' )
-//                 .replace( /ô/g, 'o' )
-//                 .replace( /è/g, 'e' )
-//                 .replace( /ï/g, 'i' )
-//                 .replace( /ü/g, 'u' )
-//                 .replace( /ã/g, 'a' )
-//                 .replace( /õ/g, 'o' )
-//                 .replace( /ç/g, 'c' )
-//                 .replace( /ì/g, 'i' ) :
-//             data;
-// };  
-//   $('.table').DataTable({
-//     "columnDefs": [ {
-// "targets": 0,
-// "orderable": true
-// } ],
-//     order: [[0, 'asc']],
-//     paging: false,
-//   "info": false,
-// language:
-// {
-//     "sEmptyTable": "NADA ENCONTRADO",
-//     "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-//     "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-//     "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-//     "sInfoPostFix": "",
-//     "sInfoThousands": ".",
-//     "sLengthMenu": "_MENU_ resultados por página",
-//     "sLoadingRecords": "CARREGANDO...",
-//     "sProcessing": "PROCESSANDO...",
-//     "sZeroRecords": "NADA ENCONTRADO",
-//     "sSearch": "PESQUISAR",
-//     "oPaginate": {
-//         "sNext": "Próximo",
-//         "sPrevious": "Anterior",
-//         "sFirst": "Primeiro",
-//         "sLast": "Último"
-//     },
-//     "oAria": {
-//         "sSortAscending": ": Ordenar colunas de forma ascendente",
-//         "sSortDescending": ": Ordenar colunas de forma descendente"
-//     }
-// }
-
-
-
-
-// });
-
-// } );
-
-
-
-</script>
 
 
 
@@ -153,9 +58,6 @@ $(document).ready(function(){
 
 
 
-
-
-// var valor1 = document.getElementById("value").value;
 var listapnome = [" ","Lixo", "Jean Wyllys", "Lularápio", "Gleisi", "Malandro", "Gilmarzinho", "Boulos", "Verdevaldo", "Nove Dedos", "Comunistinha", "Esquerdopata", "Vento Estoquista", "Feminazi", "Mortadela", "Sindicalista", "Abortista", "Ladrão", "Safado", "Terrorista", "Delator", "Pixuleco", "Nove Dedos", "Cú de Cachorro", "Mensaleiro", "Gilmar", "Mentiroso", "Gilmarzinho", "Dobrador de Meta", "Grampeado", "Feminista", "Lixo Humano"];
 
 var listasnome = ["", "de Merda", "da Odebrecht", "do Rosário", "do Triplex", "do Sítio de Atibaia", "Presidiário de Curitiba", "do Mandato Vendido", "do Presídio",  "Socialista", "Comunista", "da Greve", "Mendes" ];
@@ -226,10 +128,15 @@ console.log(listasnome[mes] );
  $('#result').on('click', function() {
   if(!snome || !pnome){
      $('.alerta').show();
+
     console.log("selecione o dia e o mes do seu aniversario"); 
   }else{
 
         $(".pnome").html(pnome+" "+snome);
+     $('.share2').css("opacity", 1);
+     // FB.XFBML.parse();
+     // FB.XFBML.parse(document.getElementById("step2"));
+
 
         // $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=Descubra%20seu%20nome%20Petista");
       $(".share").html('<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Meu nome petista é ' + pnome+" "+snome + ' | Descubra o seu #pavaoMisterioso #urubuDourado" data-count="none">Tweetar ' + pnome+" "+snome + '</a>');
@@ -326,6 +233,12 @@ h1{
   
 
   
+</div>
+
+
+<div class="share2" style="opacity: 0;">
+  <div class="fb-share-button" id="step2" data-href="https://coreilabs.github.io/seunomecomunista/" data-layout="button_count" data-size="small">
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcoreilabs.github.io%2Fseunomecomunista%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
 </div>
 				<!--Table-->
 
@@ -426,5 +339,8 @@ by <a href="https://twitter.com/dedodeouro">robolsomoro</a>
   gtag('config', 'UA-142378132-1');
 </script>
 
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3&appId=452963352150744&autoLogAppEvents=1"></script>
 </body>
 </html>

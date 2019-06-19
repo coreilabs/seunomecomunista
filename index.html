@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>SEU NOME</title>
+	<title>DESCUBRA SEU NOME PETISTA</title>
 
 	<meta property="og:site_name" content="DESCUBRA SEU NOME PETISTA">
 <meta property="og:title" content="DESCUBRA SEU NOME PETISTA" />
@@ -211,7 +211,10 @@ console.log(listasnome[mes] );
   }else{
 
         $(".pnome").html(pnome+" "+snome);
-    
+
+        // $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=Descubra%20seu%20nome%20Petista");
+      $(".share").html('<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Meu nome petista é ' + pnome+" "+snome + '| Descubra o seu #pavaoMisterioso #urubuDourado" data-count="none">Tweetar ' + pnome+" "+snome + '</a>');
+twttr.widgets.load();
   }
 
 });
@@ -233,6 +236,14 @@ console.log(listasnome[mes] );
     background-color: red;
     /*color:white;*/
   }
+
+  .bg{
+
+    background: url(pavo.png) center no-repeat;
+    min-height: 400px;
+  }
+
+
 /*
 	.bg{
 
@@ -249,17 +260,41 @@ console.log(listasnome[mes] );
 	}*/
 </style>
 
+
+
+
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+
+
+
 </head>
 <body>
 <div class="jumbotron bg">
   <div class="container ">
 <!-- <i class="fas fa-address-book " style="font-size: 4em;color:black"></i>  -->
- <h1>DESCUBRA SEU NOME COMUNISTA</h1>
+ <h1>DESCUBRA SEU NOME PETISTA</h1>
   </div>
 </div>
 
 
-	<div class="container">
+	<div class="container text-center">
   	<!-- <h1 class="display-2 text-center">AGENDINHA</h1> -->
 
 		<div class="row">
@@ -347,6 +382,11 @@ console.log(listasnome[mes] );
 			</div>
 			</div>
 		</div>
+<div class="share">
+  
+
+  
+</div>
 	</div>
 
 </body>

@@ -29,6 +29,7 @@
 	<script src="jquery.min.js"></script>
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="animate.css">
 <link rel="stylesheet" href="bootstrap-select.min.css">
 
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -133,13 +134,15 @@ console.log(listasnome[mes] );
   }else{
 
         $(".pnome").html(pnome+" "+snome);
+     $('.pnome').show();
+
      $('.share2').css("opacity", 1);
      // FB.XFBML.parse();
      // FB.XFBML.parse(document.getElementById("step2"));
 
 
         // $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=Descubra%20seu%20nome%20Petista");
-      $(".share").html('<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Meu nome petista é ' + pnome+" "+snome + ' | Descubra o seu #pavaoMisterioso #urubuDourado" data-count="none">Tweetar ' + pnome+" "+snome + '</a>');
+      $(".share").html('<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Meu nome petista é ' + pnome+" "+snome + ' | Descubra o seu! #pavaoMisterioso #urubuDourado" data-count="none">Tweetar ' + pnome+" "+snome + '</a>');
 twttr.widgets.load();
   }
 
@@ -228,7 +231,7 @@ h1{
 
 		<div class="row">
 			<div class="col-md-12">
-<h2 class="pnome"></h2>
+<h2 class="pnome animated bounceInUp" style="display: none;"></h2>
 <div class="share">
   
 

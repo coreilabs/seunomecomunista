@@ -158,6 +158,22 @@ console.log(listasnome[mes] );
 
         // $(".twitter-share-button").attr("href", "https://twitter.com/intent/tweet?text=Descubra%20seu%20nome%20Petista");
       $(".share").html('<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Meu nome petista é ' + pnome+" "+snome + ' | Descubra o seu! #pavaoMisterioso #urubuDourado" data-count="none">Tweetar ' + pnome+" "+snome + '</a>');
+
+      var uri = 'Meu nome petista é ' + pnome+' '+snome + '  | Descubra o seu! ';
+
+var res = encodeURI(uri);
+
+
+var whats = '<a class="botao" href="https://api.whatsapp.com/send?text='+res+'https://coreilabs.github.io/seunomecomunista/">Enviar Via Whatsapp</a>';
+
+// var whats = '<a href="https://wa.me/?text="'+res+'">Enviar Via Whatsapp</a>';
+
+      $(".share3").html(whats);
+      console.log(whats);
+
+
+
+
 twttr.widgets.load();
   }
 
@@ -180,6 +196,22 @@ twttr.widgets.load();
     /*background-color: red;*/
     /*color:white;*/
   }
+
+  .botao{
+    border-radius: 5px;
+    padding: 10px 17px;
+    font-size: 13px;
+    line-height: 19px;
+    height: 19px;
+    box-sizing: content-box;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+
+    background-color: #01E675;
+    color: #fff !important;
+}
 
   .bg{
 
@@ -260,9 +292,13 @@ h1{
   <div class="fb-share-button" id="step2" data-href="https://coreilabs.github.io/seunomecomunista/" data-layout="button_count" data-size="small">
     <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcoreilabs.github.io%2Fseunomecomunista%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
 </div>
-				<!--Table-->
 
-<br>
+<div class="share3">
+  
+
+
+</div>
+
 <br>
     <form action="">
  

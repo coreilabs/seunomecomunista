@@ -15,8 +15,10 @@
 	<script src="jquery.min.js"></script>
 
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap-select.min.css">
 
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap-select.min.js"></script>
 <!-- <script src="jquery.min.js"></script> -->
 
 
@@ -233,7 +235,7 @@ twttr.widgets.load();
 <style>
 	 body{
     text-transform: uppercase;
-    background-color: red;
+    /*background-color: red;*/
     /*color:white;*/
   }
 
@@ -243,7 +245,10 @@ twttr.widgets.load();
     min-height: 400px;
   }
 
-
+h1{
+    color: red!important;
+    text-shadow: 0px 0px 86px black, 0px 0px 70px black, 0px 0px 70px black, 0px 0px 70px black, 0px 0px 70px black;
+}
 /*
 	.bg{
 
@@ -299,10 +304,14 @@ twttr.widgets.load();
 
 		<div class="row">
 			<div class="col-md-12">
-<H1 class="pnome"></H1>
+<h2 class="pnome"></h2>
+<div class="share">
+  
 
+  
+</div>
 				<!--Table-->
-  <div class="table-responsive ">
+
 
     <form action="">
  
@@ -311,7 +320,7 @@ twttr.widgets.load();
        <div class="form-group">
     <label for="dia">SELECIONE O DIA DO SEU ANIVERSÁRIO</label>
     
-  <select  id="dia" name="dia" >
+  <select class="selectpicker" id="dia" name="dia" >
   <option value="">DIA</option>
   <option value="1">1</option>
   <option value="2">2</option>
@@ -356,7 +365,7 @@ twttr.widgets.load();
 
     <label for="mes">SELECIONE O MÊS DO SEU ANIVERSÁRIO</label>
 
-<select name="mes" id="mes">
+<select class="selectpicker" name="mes" id="mes">
   
   <option value="">MÊS</option>
   <option value="1">Janeiro</option>
@@ -377,16 +386,15 @@ twttr.widgets.load();
 
 
 </form>
-<button id="result">VER MEU NOME COMUNISTA</button>
-<div class="alerta" style="display: none;">ESCOLHA O DIA E O MÊS DO SEU ANIVERSÁRIO</div>
+<button id="result" class="btn btn-danger">VER MEU NOME COMUNISTA</button>
+<div class="alerta " style="display: none;">ESCOLHA O DIA E O MÊS DO SEU ANIVERSÁRIO</div>
 			</div>
 			</div>
-		</div>
-<div class="share">
-  
-
-  
-</div>
+<br>
+<br>
+<br>
+<br>
+by <a href="https://twitter.com/dedodeouro">robolsomoro</a>
 	</div>
 
 </body>

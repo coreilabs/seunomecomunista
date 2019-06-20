@@ -66,6 +66,44 @@ WebFont.load({
 $(document).ready(function(){
 
 
+function wrapText (context, text, x, y, maxWidth, lineHeight) {
+    
+    var words = text.split(' '),
+        line = '',
+        lineCount = 0,
+        i,
+        test,
+        metrics;
+
+    for (i = 0; i < words.length; i++) {
+        test = words[i];
+        metrics = context.measureText(test);
+        while (metrics.width > maxWidth) {
+            // Determine how much of the word will fit
+            test = test.substring(0, test.length - 1);
+            metrics = context.measureText(test);
+        }
+        if (words[i] != test) {
+            words.splice(i + 1, 0,  words[i].substr(test.length))
+            words[i] = test;
+        }  
+
+        test = line + words[i] + ' ';  
+        metrics = context.measureText(test);
+        
+        if (metrics.width > maxWidth && i > 0) {
+            context.fillText(line, x, y);
+            line = words[i] + ' ';
+            y += lineHeight;
+            lineCount++;
+        }
+        else {
+            line = test;
+        }
+    }
+            
+    context.fillText(line, x, y);
+}
 
 
 
@@ -78,7 +116,7 @@ canvas.width = $('img').width();
 canvas.crossOrigin = "Anonymous";
 canvas.height = $('img').height();
 // ctx.drawImage($('img').get(0), 0, 0);
-ctx.font = "70px Black Ops One";
+ctx.font = "90px Black Ops One";
 // $(document).on('input','#inp',function(){
     //redraw image
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -89,8 +127,11 @@ ctx.font = "70px Black Ops One";
 
     ctx.fillStyle = "white";
     // var naimg = "marco";
-    ctx.fillText(pnome.toUpperCase(),50,900);
-    ctx.fillText(snome.toUpperCase(),50,1000);
+wrapText(ctx, pnome.toUpperCase(), 50, 900, 1100, 18);
+wrapText(ctx, snome.toUpperCase(), 50, 1000, 1100, 90);
+
+    // ctx.fillText(pnome.toUpperCase(),50,900);
+    // ctx.fillText(snome.toUpperCase(),50,1000);
 };
 
 

@@ -293,6 +293,7 @@ twttr.widgets.load();
     text-transform: uppercase;
     /*background-color: red;*/
     /*color:white;*/
+    font-family: "Black Ops One";
   }
 
   .botao{
@@ -321,12 +322,20 @@ twttr.widgets.load();
 
 h1{
     color: red!important;
-    text-shadow: 0px 0px 86px black, 0px 0px 70px black, 0px 0px 70px black, 0px 0px 70px black, 0px 0px 70px black;
+    text-shadow: 0px 0px 86px black, 0px 0px 70px black;
 }
 
 .jumbotron {
     /*padding-top: 48px;*/
     padding-bottom: 0px!important;
+}
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+     margin-bottom: 0px; 
+    color: inherit;
+    background-color: #eee;
 }
 /*
 	.bg{
@@ -387,7 +396,7 @@ h1{
 
 <canvas id="canvas" style="margin:0 auto;display: none; max-width: 500px;" class="img-responsive animated fadeIn"></canvas>
 <br>
-<div class="share">
+<div class="share" >
   
 
   
@@ -413,10 +422,10 @@ h1{
 
 
        <div class="form-group">
-    <label for="dia">SELECIONE O DIA DO SEU ANIVERSÁRIO</label>
+    <!-- <label for="dia">SELECIONE O DIA DO SEU ANIVERSÁRIO</label> -->
     
   <select class="selectpicker" id="dia" name="dia" >
-  <option value="">DIA</option>
+  <option value="">DIA ANIVERSÁRIO</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -458,11 +467,11 @@ h1{
 
        <div class="form-group">
 
-    <label for="mes">SELECIONE O MÊS DO SEU ANIVERSÁRIO</label>
+    <!-- <label for="mes">SELECIONE O MÊS DO SEU ANIVERSÁRIO</label> -->
 
 <select class="selectpicker" name="mes" id="mes">
   
-  <option value="">MÊS</option>
+  <option value="">MÊS ANIVERSÁRIO</option>
   <option value="1">Janeiro</option>
   <option value="2">Fevereiro</option>
   <option value="3">Março</option>

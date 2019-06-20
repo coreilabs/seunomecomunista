@@ -63,7 +63,7 @@ canvas.width = $('img').width();
 canvas.crossOrigin = "Anonymous";
 canvas.height = $('img').height();
 // ctx.drawImage($('img').get(0), 0, 0);
-ctx.font = "60pt Arial Black";
+ctx.font = "50pt Arial Black";
 // $(document).on('input','#inp',function(){
     //redraw image
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -181,9 +181,7 @@ snome = listasnome[mes];
 
 criaimagem(pnome,snome);
 // });
-$('button').click(function(){
-    console.log(ctx.getImageData(50, 50, 100, 100));
-});
+
 
 
 
@@ -327,7 +325,7 @@ h1{
 			<div class="col-md-12">
 <!-- <h2 class="pnome animated bounceInUp" style="display: none;"></h2> -->
 
-<canvas id="canvas" style="max-width:400px;margin:0 auto;" class="img-responsive  animated bounceInUp"></canvas>
+<canvas id="canvas" style="max-width:400px;margin:0 auto;display: none;" class="img-responsive  animated bounceInUp"></canvas>
 <br>
 <div class="share">
   
@@ -432,8 +430,8 @@ h1{
 
 <form>
     <img style="display:none" src="nome.jpg" id="imgnome" crossorigin="anonymous"/>
- <input type="text" id="inp"/>
-  <button type="submit">Save</button>
+ <!-- <input type="text" id="inp"/> -->
+  <!-- <button type="submit">Save</button> -->
 </form>
 
 

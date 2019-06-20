@@ -199,9 +199,11 @@ snome = listasnome[mes];
 criaimagem(pnome,snome);
 // });
 
+// $("html, body").animate({ scrollTop: $('#canvas').offset().top }, 1000);
 
-
-
+  $([document.documentElement, document.body]).animate({
+        scrollTop: $("#canvas").offset().top
+    }, 5000);
 
 
      $('.pnome').show();
@@ -342,7 +344,7 @@ h1{
 			<div class="col-md-12">
 <!-- <h2 class="pnome animated bounceInUp" style="display: none;"></h2> -->
 
-<canvas id="canvas" style="margin:0 auto;display: none;" class="img-responsive animated bounceInUp"></canvas>
+<canvas id="canvas" style="margin:0 auto;display: none;" class="img-responsive animated fadeIn"></canvas>
 <br>
 <div class="share">
   

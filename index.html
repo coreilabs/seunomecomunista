@@ -112,15 +112,15 @@ function wrapText (context, text, x, y, maxWidth, lineHeight) {
 
         var canvas = document.getElementById('canvas'),
         ctx = canvas.getContext('2d');
-canvas.width = $('img').width();
+canvas.width = $('#imgnome').width();
 canvas.crossOrigin = "Anonymous";
-canvas.height = $('img').height();
+canvas.height = $('#imgnome').height();
 // ctx.drawImage($('img').get(0), 0, 0);
 ctx.font = "90px Black Ops One";
 // $(document).on('input','#inp',function(){
     //redraw image
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.drawImage($('img').get(0), 0, 0);
+    ctx.drawImage($('#imgnome').get(0), 0, 0);
     //refill text
     
     // var naimg = ""+pnome.toUpperCase()+" "+snome.toUpperCase()+"";
@@ -337,6 +337,18 @@ h1{
     color: inherit;
     background-color: #eee;
 }
+
+/*#result:hover{
+  box: zoo;
+}*/
+
+
+#result {cursor:pointer; transition: all .2s ease-in-out; }
+#result:hover { transform: scale(1.1); }
+
+
+
+
 /*
 	.bg{
 
@@ -490,7 +502,8 @@ h1{
 
 
 </form>
-<button id="result" class="btn btn-danger">VER MEU NOME PETISTA</button>
+<!-- <button id="result" class="btn btn-danger">VER MEU NOME PETISTA</button> -->
+<img id="result"   src="botao.png" />
 <div class="alerta " style="display: none;">ESCOLHA O DIA E O MÊS DO SEU ANIVERSÁRIO</div>
 			</div>
 			</div>
